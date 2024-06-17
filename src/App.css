@@ -1,0 +1,143 @@
+/* Apply box-sizing globally */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%; /* Ensure html takes full height */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #202020;
+  background-color: #fbfbfb;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%; /* Ensure body takes at least full height */
+}
+
+.container {
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+/* Specific styling for the Pokemon component */
+.pokemon__name {
+  background-color: #ecd018;
+  text-align: center;
+  padding: 10px;
+}
+
+.pokemon__name p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.container .pokemon__image {
+  padding: 20px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .pokemon__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pokemon__attacks {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+}
+.container .pokemon__attacks {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+}
+
+.container .pokemon__attacks span {
+  width: 32%;
+  background-color: #f16820;
+  border-radius: 3px;
+  padding: 7px;
+  font-weight: 700;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 15px;
+}
+
+.container .pokemon__meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.container .pokemon__meta span {
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  background-color: #7bb7b7;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+/* Additional styling for other elements */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
